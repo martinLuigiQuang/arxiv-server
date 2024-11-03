@@ -14,7 +14,5 @@ def search():
     search_query = request.args.get('search_query')
     start = request.args.get('start')
     max_results = request.args.get('max_results')
-    sort_by = request.args.get('sort_by')
-    sort_order = request.args.get('sort_order')
-    search_results = arXivService.get_search_results(search_query, start, max_results, sort_by, sort_order)
+    search_results = arXivService.get_search_results(search_query, start, max_results)
     return jsonify(search_results)
