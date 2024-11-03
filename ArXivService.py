@@ -10,6 +10,7 @@ class ArXivService:
         entries = []
         for index, entry in enumerate(root.findall('base_ns:entry', ns)):
             entries.append({
+                'id': entry.find('base_ns:id', ns).text,
                 'title': entry.find('base_ns:title', ns).text,
                 'summary': entry.find('base_ns:summary', ns).text,
             })
