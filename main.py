@@ -8,7 +8,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 arXivService = ArXivService()
 
-@app.route('/api/search', methods=['GET'])
+@app.route('/api/v1/search', methods=['GET'])
 @cross_origin()
 def search():
     search_query = request.args.get('search_query')
